@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="32499KDDLB.GlowingBear" Version="1.1.2.0" Publisher="CN=068C7742-CCFE-465B-AB63-A8FF90DADEC9" />
+  <mp:PhoneIdentity PhoneProductId="e1e50940-5ddf-4aec-b533-68a62b21512d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Glowing Bear</DisplayName>
+    <PublisherDisplayName>KDDLB (Kevin López B.)</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="https://latest.glowing-bear.org/index.html">
+      <uap:VisualElements DisplayName="Glowing Bear" Description="Glowing Bear - WeeChat web frontend" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square71x71Logo="images\Square71x71Logo.png">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\splashscreen.png" />
+      </uap:VisualElements>
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="https://cdnjs.cloudflare.com/*" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://*.imgur.com" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://*.glowing-bear.org/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://media.giphy.com" Type="include" WindowsRuntimeAccess="none" />
+      </uap:ApplicationContentUriRules>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
